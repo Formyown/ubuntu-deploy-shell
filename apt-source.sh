@@ -1,5 +1,5 @@
 #!/bin/bash
-sudo -i
+
 if [ ! -d "/etc/apt/sourses.list.backup" ]; then
     mv /etc/apt/sources.list /etc/apt/sourses.list.backup
     echo "Backup sourses.list"
@@ -20,6 +20,6 @@ echo "deb-src http://mirrors.aliyun.com/ubuntu/ bionic-backports main restricted
 
 echo "Done"
 
-sudo apt update
-sudo apt upgrade
+apt update
+apt upgrade
 exit
