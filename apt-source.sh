@@ -1,5 +1,5 @@
 #!/bin/bash
-su root
+sudo -i
 if [ ! -d "/etc/apt/sourses.list.backup" ]; then
     mv /etc/apt/sources.list /etc/apt/sourses.list.backup
     echo "Backup sourses.list"
@@ -22,3 +22,4 @@ echo "Done"
 
 sudo apt update
 sudo apt upgrade
+exit
