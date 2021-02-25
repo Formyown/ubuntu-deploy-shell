@@ -1,11 +1,10 @@
 #!/bin/bash
-
+su root
 if [ ! -d "/etc/apt/sourses.list.backup" ]; then
     mv /etc/apt/sources.list /etc/apt/sourses.list.backup
     echo "Backup sourses.list"
 fi
 
-su root
 echo "" > /etc/apt/sources.list
 
 echo "deb http://mirrors.aliyun.com/ubuntu/ bionic main restricted universe multiverse" >> /etc/apt/sources.list
@@ -21,5 +20,5 @@ echo "deb-src http://mirrors.aliyun.com/ubuntu/ bionic-backports main restricted
 
 echo "Done"
 
-apt update
-apt upgrade
+sudo apt update
+sudo apt upgrade
